@@ -7,6 +7,8 @@
     <title>The band</title>
     <link rel="icon" href="https://fullstack.edu.vn/assets/favicon/ms-icon-144x144.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- <link rel="stylesheet" href="./assets/css/test.css"> -->
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 
@@ -37,7 +39,10 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
-
+            <!-- menu btn on mobile -->
+            <div id="mobile-menu" class="mobile-menubtn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
             <!-- End: search button-->
 
 
@@ -63,7 +68,7 @@
                     consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
 
-                <div class="row member-list">
+                <!-- <div class="row member-list">
                     <div class="text-center col col-third">
                         <p class="member-name">Name</p>
                         <img src="/assets/img/bandmember.jpg" alt="" class="member-img">
@@ -79,7 +84,7 @@
                         <img src="/assets/img/bandmember.jpg" alt="" class="member-img">
 
                     </div>
-                </div>
+                </div> -->
             </div>
 
             <!-- Tour section -->
@@ -188,6 +193,39 @@
             <p class="copyright">Powered by <a href="w3school.com">w3.css</a></p>
         </div>
     </div>
+
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerHeight = header.clientHeight;
+
+        // open close mobile menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if (isClosed) {
+                header.style.height = 'auto';
+            } else {
+                header.style.height = null;
+            }
+        }
+
+        // auto close when click menu-item
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+
+            menuItem.onclick = function(event) {
+                // console.log(this);
+                var isParent = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+                if (isParent) {
+                    event.preventDefault();
+                } else {
+                    header.style.height = null;
+                }
+
+            }
+        }
+    </script>
 </body>
 
 </html>
