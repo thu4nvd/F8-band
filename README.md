@@ -17,6 +17,9 @@ Website: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
 * Responsive Web
 * Flexbox 
 * BEM and name convention
+* Khẩu quyết: Kiểu Kích Hình Vị Săc Cấp
+	Hình: Ẩn, tròn, mờ
+	Vị: Hiển, Lề, Sâu
 
 ## Reference 
 
@@ -24,4 +27,3 @@ Website: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
 * W3 CSS Study [W3-School](https://www.w3schools.com/w3css/default.asp) 
 * CSS Study [W3-School](https://www.w3schools.com/css/default.asp) 
 * HTML Course [W3-School](https://www.w3schools.com/html/default.asp)
-
