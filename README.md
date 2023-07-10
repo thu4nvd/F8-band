@@ -17,9 +17,9 @@ Website: https://www.w3schools.com/w3css/tryw3css_templates_band.htm
 * Responsive Web
 * Flexbox 
 * BEM and name convention
-* Khẩu quyết: Kiểu Kích Hình Vị Săc Cấp
-	Hình: Ẩn, tròn, mờ
-	Vị: Hiển, Lề, Sâu
+* Khẩu quyết: (Kiểu + Kích) (Hình Vị) (Săc Cấp)  
+    Hình: Ẩn, tròn, mờ   
+    Vị: Hiển, Lề, Sâu   
 
 ## Reference 
 
